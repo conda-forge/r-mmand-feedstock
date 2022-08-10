@@ -1,4 +1,4 @@
-{% set version = '1.6.1' %}
+{% set version = "1.6.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/mmand_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/mmand/mmand_{{ version }}.tar.gz
-  sha256: 5818cdfbf28f4a4c873ce836b3a86a8d497d82918c0906a72ac9e73810d846a7
+  sha256: d5261f3026b028178b26d6e747c2f7cd8f41492b2a8a92c48e8989bce9ed9943
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -54,13 +54,10 @@ test:
 about:
   home: https://github.com/jonclayden/mmand
   license: GPL-2.0-only
-  summary: Provides tools for performing mathematical morphology operations, such as erosion
-    and dilation, on data of arbitrary dimensionality. Can also be used for finding
-    connected components, resampling, filtering, smoothing and other image processing-style
-    operations.
+  summary: Provides tools for performing mathematical morphology operations, such as erosion and dilation, on data of arbitrary dimensionality. Can also be used for finding connected components, resampling, filtering, smoothing and other image processing-style operations.
   license_family: GPL2
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:

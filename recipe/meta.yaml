@@ -1,4 +1,4 @@
-{% set version = "1.6.2" %}
+{% set version = "1.6.3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/mmand_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/mmand/mmand_{{ version }}.tar.gz
-  sha256: d5261f3026b028178b26d6e747c2f7cd8f41492b2a8a92c48e8989bce9ed9943
+  sha256: fc375da6b879fd1991880fd358ceeb762e61b3a1b02af9cff3a366d0811e74a1
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
